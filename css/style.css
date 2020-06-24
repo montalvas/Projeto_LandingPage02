@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* CABEÇALHO */
+
+header{
+    width: 100%;
+    padding: 10px 2%;
+    background-color: #DEDEDE;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+.logo:nth-of-type(1){
+    float: left;
+}
+
+.logo:nth-of-type(2){
+    float: right;
+}
+
+.logo img{
+    width: 160px;
+    height: 60px;
+}
+
+/* MAIN */
+
+main{
+    width: 100%;
+    
+}
+
+/* FORMULÁRIO */
+
+.background{
+    height: 600px;
+    background-image: url(../img/image-form.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form{
+    width: 400px;
+    margin: 10px 40px 10px 0;
+    float: right;
+    background-color: rgba(233, 248, 247, 0.712);
+}
+
+.form h2{
+    padding: 20px 10px 10px 10px;
+    background-color: rgba(222, 225, 245, 0.514);
+    color: black;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.form form{
+    margin-top: 8px;
+    padding: 15px;
+}
+
+.form label{
+    font-size: 15px;
+    color: #525252;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-element:not(:first-of-type){
+    margin-top: 30px;
+}
+
+.form-element:last-of-type{
+    margin-top: 20px;
+}
+
+.form input[type=text],
+.form input[type=email],
+.form input[type=tel]{
+    width: 95%;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+}
+
+.form input[type=text]:focus,
+.form input[type=email]:focus,
+.form input[type=tel]:focus{
+    outline: 0;
+    font-size: 16px;
+}
+
+.form input[type=submit]{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #033C50;
+    color: white;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+}
+
+.form-element p{
+    font-weight: bold;
+}
+
+/* ÍCONE */
+
+.icone{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    transform: translateX(-50%);
+    background-image: url(../img/arrow.png);
+    background-size: cover;
+}
+
+/* SLOGAN */
+
+.slogan{
+    width: 100%;
+    position: relative;
+    padding: 40px 0;
+    text-align: center;
+    background-color: #15747c;
+}
+
+.slogan h2{
+    max-width: 600px;
+    padding: 10px;
+    display: inline-block;
+    color: #ddd;
+    font-size: 36px;
+    font-weight: normal;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.slogan p{
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 26px;
+    color: #ddd;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* MOSAICO */
+
+.item-mosaico{
+    display: flex;
+}
+
+.item-mosaico:nth-of-type(2n+2){
+    flex-direction: row-reverse;
+}
+
+.item-text{
+    width: 40%;
+    padding: 60px 40px;
+    background-color: #e0edf3;
+}
+
+.item-text p{
+    color: #422715;
+    font-size: 17px;
+    text-indent: 15px;
+}
+
+.item-image{
+    width: 60%;
+    background-image: url(../img/mosaico1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item-mosaico:nth-of-type(2) .item-image{
+    background-image: url(../img/mosaico2.jpg);
+}
+
+.item-mosaico:nth-of-type(3) .item-image{
+    background-image: url(../img/mosaico3.jpg);
+}
+
+.item-mosaico:nth-of-type(4) .item-image{
+    background-image: url(../img/mosaico4.jpg);
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+    background-color: #DEDEDE;
+}
+
+footer img{
+    width: 150px;
+}
+
+footer p{
+    font-size: 18px;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 960px){
+    
+    /* FORMULÁRIO */
+    .background{
+        padding: 15px 0;
+    }
+    .form{
+        float: none;
+        margin: 0 auto;
+    }
+
+    /* SLOGAN */
+
+    .slogan h2{
+        font-size: 32px;
+    }
+
+    .slogan p{
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    
+    /* MOSAICO */
+    .item-mosaico{
+        display: block;
+    }
+    
+    .item-text{
+        width: 100%;
+        padding: 40px 20px;
+    }
+    
+    .item-text p{
+        font-size: 16px;
+        text-align: justify;
+        text-indent: 15px;
+    }
+    
+    .item-image{
+        width: 100%;
+        height: 60vw;
+    }
+}
+
+@media screen and (max-width: 600px){
+    
+    /* CABEÇALHO */
+    header{
+        text-align: center;
+    }
+
+    .container > .logo{
+        float: none;
+        margin: 10px 0;
+    }
+
+    /* MAIN */
+    main{
+        padding: 0;
+    }
+
+    /* FORMULÁRIO */
+
+    .background{
+        height: 100%;
+        background-size: cover;
+        padding-bottom: 40px;
+    }
+
+    .form{
+        width: 70%;
+    }
+
+    .form h2{
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .form label{
+        font-size: 13px;
+    }
+
+    .form input[type=text]:focus,
+    .form input[type=email]:focus,
+    .form input[type=tel]:focus{
+        font-size: 13px;
+    }
+
+    .form input[type=submit]{
+        font-size: 15px;
+    }
+
+    .form p{
+        font-size: 14px;
+    }
+
+    /* ÍCONE */
+
+    .icone{
+        width: 40px;
+        height: 40px;
+        top: -20px;
+    }
+
+    /* SLOGAN */
+
+    .slogan h2{
+        font-size: 28px;
+        padding: 8px;
+    }
+
+    .slogan p{
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    /* MOSAICO */
+
+    .item-text{
+        padding: 30px 20px;
+    }
+    
+    .item-text p{
+        font-size: 14px;
+        text-indent: 15px;
+        text-align: justify;
+    }
+
+    /* FOOTER */
+
+    footer p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 430px){
+
+    /* FORMULÁRIO */
+    .form{
+        width: 80%;
+    }
+
+    /* MOSAICO */
+    
+    .item-text p{
+        font-size: 13px;
+        text-align: justify;
+    }
+}
